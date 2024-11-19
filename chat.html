@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-       div{
+      div {
         height: 125px;
         width: 125px;
         border: 5px solid black;
         white-space: nowrap;
-       }
-       .c2{
-         overflow: hidden;
-         text-overflow: ellipsis;
-       }
-       .c1{
+      }
+      .c2 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .c1 {
         display: none;
-       }
-       div:hover + .c1{
+      }
+      div:hover + .c1 {
         display: block;
         background-color: aqua;
         width: 225px;
         border-radius: 15px;
-       }
-
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <p class="c2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde deserunt error tenetur blanditiis earum perferendis officiis harum omnis eveniet, ex fugit nemo, recusandae a. Recusandae, voluptas error! Totam, quas deleniti.</p>
-    
+      <p class="c2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde deserunt
+        error tenetur blanditiis earum perferendis officiis harum omnis eveniet,
+        ex fugit nemo, recusandae a. Recusandae, voluptas error! Totam, quas
+        deleniti.
+      </p>
     </div>
-    <p class="c1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde deserunt error tenetur blanditiis earum perferendis officiis harum omnis eveniet, ex fugit nemo, recusandae a. Recusandae, voluptas error! Totam, quas deleniti.</p>  
-</body>
+    <p class="c1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde deserunt
+      error tenetur blanditiis earum perferendis officiis harum omnis eveniet,
+      ex fugit nemo, recusandae a. Recusandae, voluptas error! Totam, quas
+      deleniti.
+    </p>
+  </body>
 </html>
