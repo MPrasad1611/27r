@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbox</title>
+    <style>
+       .c1{
+        border: 8px solid black;
+        background-color: lightblue;
+        border-radius: 40px;
+        height: 600px;
+        width: 290px;
+        position: relative;
+       
+        overflow-y: scroll;
+       }
+       .c1::-webkit-scrollbar{
+        display: NONE;
+       }
+       .c2{
+        border: 15px solid black;
+        padding-top: -10px;
+        border-radius: 18px;
+        border-bottom-left-radius: 1px;
+        border-bottom-right-radius: 1px;
+        height: 25px;
+        background-color: black;
+        position: relative;
+       }
+       svg{
+        height: 45px;
+        width: 30px;
+        margin-right: 2000px;
+        margin-top: -10px;
+       }
+       .e1{
+        position: absolute;
+        height: 45px;
+        width: 30px;
+        left: 45px;
+        top: -1px;
+       }
+       .t1{
+          color: orange;
+          margin-top: -43px;
+          font-style: oblique;
+       }
+       .c3{
+        border: 3px solid orange;
+        position: absolute;
+        width: 30px;
+        left: 20px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c4{
+        border: 3px solid orange;
+        position: absolute;
+        width: 30px;
+        right: 30px;
+        top: 100px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c5{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        left: 20px;
+        top:130px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c6{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 190px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c7{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        left: 20px;
+        top: 220px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c8{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 270px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c9{
+        border: 3px solid orange;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 310px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c10{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 360px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c11{
+        border: 3px solid orange;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 390px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c12{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 440px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c13{
+        border: 3px solid orange;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 500px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c14{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 550px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c15{
+        border: 3px solid orange;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 620px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c16{
+        border: 3px solid orange;
+        position: absolute;
+        width: 70px;
+        right: 30px;
+        top: 680px;
+        border-radius: 8px;
+        background-color: rgb(168, 157, 39);
+       }
+       .c17{
+        border: 3px solid orange;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 730px;
+        border-radius: 8px;
+        background-color: aqua;
+       }
+       .c18{
+        border: 3px solid orange;
+        position: absolute;
+        width: 160px;
+        right: 20px;
+        top: 780px;
+        border-radius: 8px;
+        background-color:  rgb(168, 157, 39);
+       }
+      .e2{
+        height: 600px;
+        width: 200px;
+        background-color: lightblue;
+        opacity: 0.1;
+        position: fixed;
+        top: 150px;
+        left: 220px;
+      }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Chat Box UI</h1>
+    <div class="c1">
+          <div class="c2"><svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7071 4.29289C12.0976 4.68342 12.0976 5.31658 11.7071 5.70711L6.41421 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H6.41421L11.7071 18.2929C12.0976 18.6834 12.0976 19.3166 11.7071 19.7071C11.3166 20.0976 10.6834 20.0976 10.2929 19.7071L3.29289 12.7071C3.10536 12.5196 3 12.2652 3 12C3 11.7348 3.10536 11.4804 3.29289 11.2929L10.2929 4.29289C10.6834 3.90237 11.3166 3.90237 11.7071 4.29289Z" fill="#000000"></path> </g></svg>
+            <svg class="e1" viewBox="-2.4 -2.4 28.80 28.80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>contacts_line</title> <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="User" transform="translate(-528.000000, 0.000000)"> <g id="contacts_line" transform="translate(528.000000, 0.000000)"> <path d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z" id="MingCute" fill-rule="nonzero"> </path> <path d="M15,14 C17.6887316,14 19.8818169,16.1223292 19.9953804,18.7831122 L20,19 L20,21 C20,21.5523 19.5523,22 19,22 C18.48715,22 18.0644908,21.613973 18.0067275,21.1166239 L18,21 L18,19 C18,17.402275 16.7511226,16.096336 15.1762773,16.0050925 L15,16 L7,16 C5.40232321,16 4.09633941,17.2488774 4.00509271,18.8237227 L4,19 L4,21 C4,21.5523 3.55228,22 3,22 C2.48716857,22 2.06449347,21.613973 2.0067278,21.1166239 L2,21 L2,19 C2,16.3112684 4.12231026,14.1181831 6.78311066,14.0046196 L7,14 L15,14 Z M21,13 C21.5523,13 22,13.4477 22,14 C22,14.5523 21.5523,15 21,15 L20,15 C19.4477,15 19,14.5523 19,14 C19,13.4477 19.4477,13 20,13 L21,13 Z M11,2 C13.7614,2 16,4.23858 16,7 C16,9.76142 13.7614,12 11,12 C8.23858,12 6,9.76142 6,7 C6,4.23858 8.23858,2 11,2 Z M21,10 C21.5523,10 22,10.4477 22,11 C22,11.5523 21.5523,12 21,12 L19,12 C18.4477,12 18,11.5523 18,11 C18,10.4477 18.4477,10 19,10 L21,10 Z M11,4 C9.34315,4 8,5.34315 8,7 C8,8.65685 9.34315,10 11,10 C12.6569,10 14,8.65685 14,7 C14,5.34315 12.6569,4 11,4 Z M21,7 C21.5523,7 22,7.44772 22,8 C22,8.51283143 21.613973,8.93550653 21.1166239,8.9932722 L21,9 L18,9 C17.4477,9 17,8.55228 17,8 C17,7.48716857 17.386027,7.06449347 17.8833761,7.0067278 L18,7 L21,7 Z" id="形状" fill="#09244B"> </path> </g> </g> </g> </g></svg>
+            <h1 class="t1">Vishnu</h1>
+        </div>
+        <p class="c3">Hi<p>
+        <p class="c4">Hi</p>
+        <p class="c5">How are you</p>
+        <p class="c6">I am fine</p>
+        <p class="c7">Did you call him</p>
+        <p class="c8">Not yet, why?</p>
+        <p class="c9">He's waiting for updates.</p>
+        <p class="c10">I'll call him now.</p>
+        <p class="c11">Let me know later.</p>
+        <p class="c12">Sure, will update you.</p>
+        <p class="c13">Are the files ready?</p>
+        <p class="c14">Still working on them.</p>
+        <p class="c15">Need them by tomorrow!</p>
+        <p class="c16">I'll speed things up.</p>
+        <p class="c17">Thanks, I appreciate it!</p>
+        <p class="c18">No problem at all!</p>
+        <svg class="e2" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3.07 -3.07 36.81 36.81" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-3.07" y="-3.07" width="36.81" height="36.81" rx="18.405" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017 c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382 c-6.979,0-12.656,5.634-12.656,12.56c0,2.748,0.896,5.292,2.411,7.362l-1.58,4.663l4.862-1.545c2,1.312,4.393,2.076,6.963,2.076 c6.979,0,12.658-5.633,12.658-12.559C28.27,8.016,22.59,2.382,15.61,2.382z M23.214,18.38c-0.094-0.151-0.34-0.243-0.708-0.427 c-0.367-0.184-2.184-1.069-2.521-1.189c-0.34-0.123-0.586-0.185-0.832,0.182c-0.243,0.367-0.951,1.191-1.168,1.437 c-0.215,0.245-0.43,0.276-0.799,0.095c-0.369-0.186-1.559-0.57-2.969-1.817c-1.097-0.972-1.838-2.169-2.052-2.536 c-0.217-0.366-0.022-0.564,0.161-0.746c0.165-0.165,0.369-0.428,0.554-0.643c0.185-0.213,0.246-0.364,0.369-0.609 c0.121-0.245,0.06-0.458-0.031-0.643c-0.092-0.184-0.829-1.984-1.138-2.717c-0.307-0.732-0.614-0.611-0.83-0.611 c-0.215,0-0.461-0.03-0.707-0.03S9.897,8.215,9.56,8.582s-1.291,1.252-1.291,3.054c0,1.804,1.321,3.543,1.506,3.787 c0.186,0.243,2.554,4.062,6.305,5.528c3.753,1.465,3.753,0.976,4.429,0.914c0.678-0.062,2.184-0.885,2.49-1.739 C23.307,19.268,23.307,18.533,23.214,18.38z"></path> </g> </g></svg>
+    </div>
+</center>
+</body>
+</html>
