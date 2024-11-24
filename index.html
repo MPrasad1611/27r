@@ -7,13 +7,17 @@
     <style>
       .c1 {
         background-color: orange;
+        border-radius: 4px;
         border: orange;
         text-align: center;
         height: 200px;
       }
       .c2{
         border: 3px solid black;
-        background-color: rgba(0, 0, 0, 0.116);
+        background-color: black;
+        /* position: sticky;
+        top:2px;
+        z-index: 2; */
       }
       .c2 div,.c2 h1{
         display: inline;
@@ -27,6 +31,60 @@
       :target{
     text-decoration: none;
       }
+      .c2 div{
+        margin: 10px;
+        padding: 80px;
+      }
+      #s1{
+        position: relative;
+        border-radius: 4px;
+        left: 370px;
+        /* border: 3px solid black; */
+        background-color: rgb(46, 214, 116);
+        margin-top: -9px;
+        width: 1000px;
+        height: 150px;
+      }
+      #s2{
+        position: relative;
+        border-radius: 4px;
+        left: 370px;
+        /* border: 3px solid black; */
+        background-color: rgb(46, 214, 116);
+        margin-top: -9px;
+        width: 1000px;
+        height: 150px;
+      }
+      #s3{
+        position: relative;
+        border-radius: 4px;
+        left: 370px;
+        /* border: 3px solid black; */
+        background-color: rgb(46, 214, 116);
+        margin-top: -9px;
+        width: 1000px;
+        height: 200px;
+      }
+      #s4{
+        position: relative;
+        border-radius: 4px;
+        left: 370px;
+        /* border: 3px solid black; */
+        background-color: rgb(46, 214, 116);
+        margin-top: -9px;
+        width: 1000px;
+        height: 150px;
+      }
+      #s5{
+        position: relative;
+        border-radius: 4px;
+        left: 370px;
+        /* border: 3px solid black; */
+        background-color: rgb(46, 214, 116);
+        margin-top: -9px;
+        width: 1000px;
+        height: 250px;
+      }
     </style>
   </head>
   <body>
@@ -34,11 +92,55 @@
                    <h3 class="a2">Fresher Job Seeker</h3>
     </div>
     <div class="c2">
-        <div><a href=""><h1>Objective</h1></a></div>
-        <div><a href=""><h1>Education</h1></div>
-        <div><a href=""><h1>Skills</h1></div>
-        <div><a href=""><h1>Projects</h1></div>
-        <div><a href=""><h1>Contact</h1></div>
+        <div ><a href="#s1"><h1>Objective</h1></a></div>
+        <div ><a href="#s2"><h1>Education</h1></div>
+        <div ><a href="#s3"><h1>Skills</h1></div>
+        <div ><a href="#s4"><h1>Projects</h1></div>
+        <div ><a href="#s5"><h1>Contact</h1></div>
       </div>
+    <main>
+       <section id="s1"><h1 style="color: rgb(5, 5, 112);">Objective</h1>
+        <ul>
+            <li>Enthusiastic and detail-oriented software engineering
+                graduate seeking an entry-level position to apply my
+                programming knowledge and problem-solving skills. Eager to
+                contribute to innovative projects, grow my technical
+                expertise, and drive impactful solutions in a dynamic
+                software development environment</li>
+        </ul>
+    </section>
+    <section id="s2"><h1 style="color: rgb(5, 5, 112);">Education</h1>
+        <ul>
+            <li>Computer Science And Engineering(AI & ML),Anil Neerukonda Institute Of Technology and Sciences.(CGPA:9.18/10)
+            </li>
+            <li>Intermediate,Tirmuala junior College.(93.6)</li>
+        </ul>
+    </section>
+    <section id="s3"><h1 style="color: rgb(5, 5, 112);">Technical Skills</h1>
+        <ul>
+            <li><p>Programming Languages - C, Java</p></li>
+            <li><p>Frontend - HTML,CSS,Java Script</p></li>
+            <li><p>Tools- Github,Git</p></li>
+            <li><p>Framework- Bootstrap</p></li>
+        </ul>
+    </section>
+    <section id="s4"><h1 style="color: rgb(5, 5, 112);">Project</h1>
+        <ul>
+            <li>Piezoelectric Model Lift:
+                Our project basic idea is to produce
+                electricity by walking on the piezo
+                sensors which are placed in
+                underground or under stairs.</li>
+        </ul>
+    </section>
+    <section id="s5"><h1 style="color: rgb(5, 5, 112);">Contact</h1>
+        <ul>
+            <li><p>EmaiL:prasadchowdary1611@gmail.com<p></li>
+            <li><p>Phone:9392793214<p></li>
+            <li><p>GitHub:https://github.com/MPrasad1611<p></li> 
+            <li><p>LinkedIn:https://www.linkedin.com/in/prasad1611/<p></li>  
+        </ul>
+    </section>
+    </main>
   </body>
 </html>
