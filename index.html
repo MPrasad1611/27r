@@ -5,33 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: aqua;
+        }
       .c1{
         display: flex;
         flex-wrap: wrap;
-        background-color: aqua;
-        height: 700px;
+        /* height: 700px; */
+        /* background-color: black; */
       }
       .c2{
         display: flex;
         border: 3px solid black;
         flex-wrap: wrap;
         background-color: red;
-        height: 150px;
+       
         width: 6300px;
       }
-      div{
-        background-color: brown;
+      div h1{
+        /* display: flex; */
+        background-color: rgb(115, 132, 64);
+        /* flex-wrap: wrap; */
         padding: 10px;
+        margin-top: 20px;
+        margin: 20px;
+      }
+      .e1,.e2,.e3,.e4{
+       flex-grow: 1;
+       text-align: center;
       }
     </style>
 </head>
 <body>
     <div class="c1">
          <div class="c2">
-              <div><h1>Home</h1></div>
-              <div><h1>Login</h1></div>
-              <div><h1>Signup</h1></div>
-              <div><h1>AboutUs</h1></div>
+              <div class="e1"><h1>Home</h1></div>
+              <div class="e2"><h1>Login</h1></div>
+              <div class="e3"><h1>Signup</h1></div>
+              <div class="e4"><h1>AboutUs</h1></div>
+         </div>
+         <div>
+             <div></div>
+             <div></div>
+             <div></div>
          </div>
     </div>
 </body>
