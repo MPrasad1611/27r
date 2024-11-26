@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .md{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
         .c1,.c2,.c3{
           border: 2px solid;
         }
-        .c1 div{
-          border: 2px solid red;
+        .c1{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
         }
-        .c1,.c3{
+        .c1 div{
+          
+          border: 2px solid red;
+          height: 70px;
+          width: 100px;
+          border-radius: 15px;
+          background-color: orange;
+          
+        }
+        .c3{
           height: 150px;
         }
         .c2{
+          display: flex;
+          padding: 20px;
+          gap: 5px;
+        }
+        .c2 div{
           height: 250px;
+          border: 2px solid red;
+          width: 80px;
+          background-color: yellow;
+          border-radius: 10px;
+        }
+        .e2{
+          flex-grow: 1;
         }
     </style>
   </head>
