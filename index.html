@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 3px solid black;
+        padding: 10px;
+        background-color: aqua;
+      }
+      .c1,
+      .c2,
+      .c3 {
+        border: 3px solid;
+      }
+      .c1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .c1 div {
+        border: 3px solid red;
+        height: 70px;
+        width: 100px;
+        border-radius: 15px;
+       
+      }
+
+      .c2 {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+      .c2 div {
+        height: 250px;
+        border: 3px solid red;
+        width: 120px;
+        
+        border-radius: 15px;
+      }
+      /* .e2 {
+        flex-grow: 1;
+      } */
+      .c3 {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .c3 div {
+        border: 3px solid green;
+        height: 70px;
+        
+        width: 150px;
+        border-radius: 10px;
+      }
+      .i1,.i2,.i3,.i4{
+        height: 70px;
+        width: 100px;
+        border-radius: 15px;
+      }
+      .i5,.i6,.i7{
+        height: 250px;
+        width: 120px;
+        border-radius: 15px;
+      }
+      .i8,.i9,.i10{
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="c1">
+        <div class="d1"><img class="i1" src="https://www.isportindia.com//storage/app/public/news/1704348848-qZXth.jpg"></div>
+        <div class="d2"><img class="i2" src="https://i1.wp.com/static.toiimg.com/thumb/msid-105399666,width-1280,height-720,resizemode-4/105399666.jpg?strip=all" alt=""></div>
+        <div class="d3"><img class="i3" src="https://images.augustman.com/wp-content/uploads/sites/6/2024/03/01160543/413932655_3059583407508087_4629181667790147683_n.jpg" alt=""></div>
+        <div class="d4"><img class="i4" src="https://i.redd.it/ztegd2x9gnlb1.jpg" alt=""></div>
+      </div>
+      <div class="c2">
+        <div class="e1"><img class="i5" src="https://igimage.indiaglitz.com/telugu/gallery/actor/gopichand/gopichaposter04052023.jpg" alt=""></div>
+        <div class="e2"><img class="i6" src="https://qph.cf2.quoracdn.net/main-qimg-bc03d985bed89d3c05000a34ed6ca561-lq" alt=""></div>
+        <div class="e3"><img class="i7" src="https://cdn.telugu.yousay.tv/wp-content/uploads/sites/2/2023/01/10191420/image-26.png" alt=""></div>
+      </div>
+      <div class="c3">
+        <div class="f1"><img class="i8" src="" alt=""></div>
+        <div class="f2"><img class="i9" src="" alt=""></div>
+        <div class="f3"><img class="i10" src="" alt=""></div>
+      </div>
+    </div>
+  </body>
 </html>
