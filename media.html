@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .c1{
-            border: 2px solid red;
-            height: 150px;
-            width: 150px;
+      .c1 {
+        border: 2px solid red;
+        height: 150px;
+        width: 150px;
+      }
+      @media screen and (min-width: 0px) and (max-width: 320px) {
+        .c1 {
+          background-color: red;
         }
+      }
+      @media screen and (min-width: 321px) and (max-width: 375px) {
+        .c1 {
+          background-color: aqua;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="c1"></div>
-</body>
+  </body>
 </html>
