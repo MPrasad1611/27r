@@ -11,7 +11,7 @@
             display: grid;
              /* height: 600px; */
             grid-template-columns: repeat(auto-fill,minmax(200px,250px));
-            grid-template-rows: 100px 100px 100px ;
+            grid-template-rows: 100px 100px 100px 100px;
             row-gap: 10px;
            /* justify-content: center; */
            /* align-content: space-between; */
@@ -23,28 +23,34 @@
         } */
         .i1{
             background-color: red;
-            /* width: 100px;
+           grid-column-start: 1;
+           grid-column-end: 4;
             
-            border: 3px solid red; */
-            grid-column-start: 1;
-            grid-column-end: 3 ;
         }
         .i2{
             background-color: orange;
             grid-row-start: 2;
             grid-row-end: 4;
+           
+            
         }
         .i3{
             background-color: blueviolet;
         }
         .i4{
             background-color: chocolate;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
         }
         .i5{
             background-color: brown;
-            grid-column-start: 1;
-            grid-column-end: 3;
         }
+        .i6{
+            background-color: green;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }   
     </style>
 </head>
 <body>
@@ -54,6 +60,7 @@
         <div class="i3">Three</div>
         <div class="i4">Four</div>
         <div class="i5">One</div>
+        <div class="i6">Six</div>
         <!-- <div class="i2">Two</div>
         <div class="i3">Three</div>
         <div class="i4">Four</div>
