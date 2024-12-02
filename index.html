@@ -5,45 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            background-color: aqua;
-        }
-      .c1{
+      body {
+        background-color: aqua;
+      }
+      .c1 {
         border: 5px solid orange;
         background-color: orange;
         width: 140px;
         position: absolute;
         margin-top: 100px;
         left: 525px;
-        top: 150px;
+        top: 450px;
+        
       }
-      .c2{
+      .c2 {
         position: relative;
         perspective: 250px;
       }
-      .la{
+      .la {
         border: 3px solid black;
         color: white;
+        padding: 5px;
+        
         background-color: black;
       }
-      #t1:hover ~ .c1{
-        transform: rotate(45deg);
+      #t1:checked ~ .c1{
+        transform: none;
+      }
+      #t2:checked ~ .c1{
+        transform:  rotate(10deg);
+      }
+      #t3:checked ~ .c1{
+        transform:  rotate(45deg);
+      }
+      #t4:checked ~ .c1{
+        transform: rotate3d(1, 2, 1, 45deg);
+      }
+      #t5:checked ~ .c1{
+        transform: rotate3d(0, 1, 0, 60deg);  
+      }
+      #t6:checked ~ .c1{
+        transform:  rotateX(45deg);
+      }
+      #t7:checked ~ .c1{
+        transform:  rotateX(100deg);
+      }
+      #t8:checked ~ .c1{
+        transform:  rotateY(45deg);
+      }
+      #t9:checked ~ .c1{
+        transform: rotateY(80deg);
+      }
+      #t10:checked ~ .c1{
+        transform: rotateZ(45deg);
+      }
+      #t11:checked ~ .c1{
+        transform: rotateZ(90deg);
+      }
+      #t12:checked ~ .c1{
+        transform: skew(20deg,20deg);
+      }
+      #t13:checked ~ .c1{
+        transform: skew(30deg,30deg);
+      }
+      #t14:checked ~ .c1{
+        transform: skewX(30deg);
+      }
+      #t15:checked ~ .c1{
+        transform: skewX(40deg);
+      }
+      #t16:checked ~ .c1{
+        transform: skewY(30deg);
+      }
+      #t17:checked ~ .c1{
+        transform: skewY(40deg);
+      }
+      #t18:checked ~ .c1{
+        transform: translate(20px,10px);
+      }
+      #t19:checked ~ .c1{
+        transform: translate(20px,20px);
+      }
+      #t20:checked ~ .c1{
+        transform: scale(2,2);
+      }
+      #t21:checked ~ .c1{
+        transform: scale(2.5,3);
+      }
+      #t22:checked ~ .c1{
+        transform: scaleX(1.5);
+      }
+      #t23:checked ~ .c1{
+        transform: scaleX(50%);
+      }
+      #t24:checked ~ .c1{
+        transform: scaleY(1.5);
+      }
+      #t25:checked ~ .c1{
+        transform: scaleY(50%);
+      }#t26:checked ~ .c1{
+        transform: matrix(0.866,0.7,-0.8,0.866,0,0);
+      }
+      #t27:checked ~ .c1{
+        transform: matrix(0.586,0.8,-0.8,0.586,0,0);
+      }
+      #t28:checked ~ .c1{
+        transform: matrix(0.586,0.8,-0.8,0.586,40,30);
       }
     </style>
   </head>
   <body>
     <center><h1>CSS Transforms</h1></center>
-    <div class="c2">
-        <form>
-            <input type="radio" id="t1" name="trans"><label class="la" for="trans">Transform: none;</label>
-             
-        </form>
+    <input type="radio" id="t1" name="trans" /><label class="la" for="trans"
+      >Transform: none;</label><br><br>
+      <input type="radio" id="t2" name="trans" /><label class="la" for="trans"
+      >Transform: rotate(10deg);</label>
+      <br><br>
+      <input type="radio" id="t3" name="trans" /><label class="la" for="trans"
+      >Transform: rotate(45deg);</label>
+      <br><br>
+      <input type="radio" id="t4" name="trans" /><label class="la" for="trans"
+      >Transform: rotate3d(1, 2, 1, 45deg);</label>
+      <br><br>
+      <input type="radio" id="t5" name="trans" /><label class="la" for="trans"
+      >Transform: rotate3d(0, 1, 0, 60deg);</label>
+      <br><br>
+      <input type="radio" id="t6" name="trans" /><label class="la" for="trans"
+      >Transform: rotateX(45deg);</label>
+      <br><br>
+      <input type="radio" id="t7" name="trans" /><label class="la" for="trans"
+      >Transform: rotateX(100deg);</label>
+      <br><br>
+      <input type="radio" id="t8" name="trans" /><label class="la" for="trans"
+      >Transform: rotateY(45deg);</label>
+      <br><br>
+      <input type="radio" id="t9" name="trans" /><label class="la" for="trans"
+      >Transform: rotateY(80deg);</label>
+      <br><br>
+      <input type="radio" id="t10" name="trans" /><label class="la" for="trans"
+      >Transform: rotateZ(45deg);</label>
+      <br><br>
+      <input type="radio" id="t11" name="trans" /><label class="la" for="trans"
+      >Transform: rotateZ(90deg);</label>
+      <br><br>
+      <input type="radio" id="t12" name="trans" /><label class="la" for="trans"
+      >Transform: skew(20deg,20deg);</label>
+      <br><br>
+      <input type="radio" id="t13" name="trans" /><label class="la" for="trans"
+      >Transform: skew(30deg,30deg);</label>
+      <br><br>
+      <input type="radio" id="t14" name="trans" /><label class="la" for="trans"
+      >Transform: skewX(30deg);</label>
+      <br><br>
+      <input type="radio" id="t15" name="trans" /><label class="la" for="trans"
+      >Transform: skewX(40deg);</label>
+      <br><br>
+      <input type="radio" id="t16" name="trans" /><label class="la" for="trans"
+      >Transform: skewY(30deg);</label>
+      <br><br>
+      <input type="radio" id="t17" name="trans" /><label class="la" for="trans"
+      >Transform: skewY(40deg);</label>
+      <br><br>
+      <input type="radio" id="t18" name="trans" /><label class="la" for="trans"
+      >Transform: translate(20px,10px);</label>
+      <br><br>
+      <input type="radio" id="t19" name="trans" /><label class="la" for="trans"
+      >Transform: translate(20px,20px);</label>
+      <br><br>
+      <input type="radio" id="t20" name="trans" /><label class="la" for="trans"
+      >Transform: scale(2,2);</label>
+      <br><br>
+      <input type="radio" id="t21" name="trans" /><label class="la" for="trans"
+      >Transform: scale(2.5,3);</label>
+      <br><br>
+      <input type="radio" id="t22" name="trans" /><label class="la" for="trans"
+      >Transform: scaleX(1.5);</label>
+      <br><br>
+      <input type="radio" id="t23" name="trans" /><label class="la" for="trans"
+      >Transform: scaleX(50%);</label>
+      <br><br>
+      <input type="radio" id="t24" name="trans" /><label class="la" for="trans"
+      >Transform: scaleY(1.5);</label>
+      <br><br>
+      <input type="radio" id="t25" name="trans" /><label class="la" for="trans"
+      >Transform: scaleY(50%);</label>
+      <br><br>
+      <input type="radio" id="t26" name="trans" /><label class="la" for="trans"
+      >Transform: matrix(0.866,0.7,-0.8,0.866,0,0);</label>
+      <br><br>
+      <input type="radio" id="t27" name="trans" /><label class="la" for="trans"
+      >Transform: matrix(0.586,0.8,-0.8,0.586,0,0);</label>
+      <br><br>
+      <input type="radio" id="t28" name="trans" /><label class="la" for="trans"
+      >Transform: matrix(0.586,0.8,-0.8,0.586,40,30);</label>
     <div class="c1">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam,
         omnis blanditiis.
       </p>
     </div>
-</div>
   </body>
 </html>
