@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* width: 90vw; */
+        margin: auto;
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        z-index: 1;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .navbar p:hover,li a:hover{
+        background-color: rgba(128, 128, 128, 0.658);
+        padding: 10px;
+      }
+      .nav2 {
+        display: flex;
+        justify-content: space-evenly;
+        /* width: 30%; */
+        flex-wrap: wrap;
+      }
+      .nav2 a {
+        text-decoration: none;
+        color: black;
+      }
+      .Projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        width: 90vw;
+        gap: 0px;
+        margin: auto;
+        justify-items: center;
+      }
+      .Projects div img {
+        width: 250px;
+        height: 80%;
+      }
+      .c1 {
+        position: relative;
+      }
+      .c1 h1 {
+        position: absolute;
+        top: -10px;
+        color: white;
+        background-color: black;
+        font-size: medium;
+        padding: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .ab {
+        width: 90vw;
+        margin: auto;
+      }
+      .ab1 {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .ab1 img {
+        width: 250px;
+      }
+      .ab1 .c1 {
+        width: 250px;
+      }
+      .ab1 button {
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.142);
+        padding: 10px;
+        border-color: transparent;
+        font-size: large;
+      }
+      button:hover {
+        background-color: rgb(128, 128, 128);
+        cursor: pointer;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        width: 90vw;
+        margin: auto;
+      }
+      input {
+        height: 30px;
+      }
+      form button {
+        width: 125px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+        border-color: transparent;
+      }
+      .footer{
+        color: white;
+        background-color: black;
+        padding: 15px;
+        text-align: center;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <p><strong>HARSHINI</strong> Architects</p>
+
+      <ul style="display: flex; gap: 10px; list-style: none; flex-wrap: wrap">
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div style="position: relative; display: flex; justify-content: center">
+      <img
+        style="width: 90vw "
+        src="https://media.istockphoto.com/id/178447404/photo/modern-business-buildings.jpg?s=612x612&w=0&k=20&c=MOG9lvRz7WjsVyW3IiQ0srEzpaBPDcc7qxYsBCvAUJs="
+        alt=""
+      />
+      <h1 style="position: absolute; top: 50%; left: 5s0%; font-size: 70%;z-index: 1;display: flex;">
+        HARSHINI ARCHITECTURE
+      </h1>
+    </div>
+    <div id="project" style="margin-left: 5%"><h1>Projects</h1></div>
+    <div class="Projects" >
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house5.jpg" />
+        <h1>Summer House</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house2.jpg" />
+        <h1>Brick House</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house3.jpg" />
+        <h1>Renovated</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house5.jpg" />
+        <h1>Summer House</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house2.jpg" />
+        <h1>Brick House</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house3.jpg" />
+        <h1>Renovated</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house5.jpg" />
+        <h1>Summer House</h1>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/house2.jpg" />
+        <h1>Brick House</h1>
+      </div>
+    </div>
+    <div id="about" style="margin-left: 5%"><h1>About</h1></div>
+    <div class="ab">
+      <p style="margin-left: 3%;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam nihil
+        eligendi cumque eius consequatur recusandae ducimus quae iusto maxime
+        omnis iste, labore delectus tempore porro quas neque quod totam
+        quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Aperiam nihil eligendi cumque eius consequatur recusandae ducimus quae
+        iusto maxime omnis iste, labore delectus tempore porro quas neque quod
+        totam quisquam?
+      </p>
+    </div>
+    <div  class="ab1">
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/team1.jpg" />
+        <p>Harshini</p>
+        <p>CEO & Founder</p>
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales
+          pellentesque elementum.
+        </p>
+        <button>Contact</button>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/team2.jpg" />
+        <p>Pranav</p>
+        <p>Architect</p>
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales
+          pellentesque elementum.
+        </p>
+        <button>Contact</button>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/team3.jpg" />
+        <p>Vishnu</p>
+        <p>Architect</p>
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales
+          pellentesque elementum.
+        </p>
+        <button>Contact</button>
+      </div>
+      <div class="c1">
+        <img src="https://www.w3schools.com/w3images/team4.jpg" />
+        <p>Mohan</p>
+        <p>Architect</p>
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales
+          pellentesque elementum.
+        </p>
+        <button>Contact</button>
+      </div>
+    </div>
+    <div style="margin-left: 5%">
+      <h1 id="contact">Contact</h1>
+      <p>Lets get in touch and talk about your next project.</p>
+    </div>
+    <form action="">
+      <input type="text" placeholder="Name" /><input
+        type="text"
+        placeholder="EMail"
+      /><input type="text" placeholder="Subject" /><input
+        type="text"
+        placeholder="Comment"
+      />
+      <button>SEND MESSAGE</button>
+    </form>
+    <br />
+    <div style="display: flex; justify-content: center">
+      <img
+        style="width: 90vw"
+        src="https://www.w3schools.com/w3images/map.jpg"
+        alt=""
+      />
+    </div>
+    <div class="footer">
+      <p>Powered by 10000Coders Student</p>
+    </div>
+  </body>
+</html>
