@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations&Transitions</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        .c1{
+            margin-top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            animation-name: sqtocir;
+            animation-duration: 5s;
+            animation-iteration-count: infinite ;
+            animation-direction: alternate; 
+            animation-timing-function: ease-in-out;
+            
+        }
+        .c1:hover{
+            transition: scale(2,1);
+        }
+        @keyframes sqtocir {
+            25%{
+                background-color: orange;
+                border-radius: 0 0 0 0;
+                transform: rotate(45deg);
+                
+            }
+            50%{
+                background-color: red;
+                borderradius: 50 50% 0 0;
+                transform: rotate(90deg);
+                
+            }
+            75%{
+                background-color: aqua;
+                border-radius: 50% 50% 50% 0;
+                transform: rotate(135deg);
+               
+            }
+            100%{
+                background-color: green;
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(180deg);
+                
+            }
+            
+        }
+      h1,h2{
+        color: cyan;
+       
+      }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>CSS Animations And Transitions</h1>
+        <h2 style=" text-underline-position: below;">Square To Circle</h2>
+    <div class="c1">
+        
+    </div>
+</center>
+</body>
+</html>
