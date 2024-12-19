@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name=prompt("Enter your name");
+        let pname=prompt("Enter Product name");
+        let pprice=prompt("Enter the price");
+        let dname=prompt("Enter the Day");
+        let oca=prompt("Enter Occassion");
+        let platname=prompt("Enter Platform:");
+        let user={
+           username:name,
+           product:pname,
+           price:pprice,
+           day:dname,
+           ocassion:oca,
+           plat:platname
+        };
+        alert(`${user.username} has purchased a ${user.product} which costs ${user.price} on ${user.day}, on occassion of ${user.ocassion} in ${user.plat}`);
+        
+        let sname=prompt("Enter Student Name");
+        let comname=prompt("Enter Company name");
+        let package=prompt("Enter Package");
+        let domain=prompt("Enter Domain");
+        let jdate=prompt("Enter Joing Date");
+        let stu={
+            name:sname,
+            cname:comname,
+            pack:package,
+            dom:domain,
+            jd:jdate
+        };
+        alert(`${stu.name} got placed in ${stu.cname} company as a ${stu.dom} with package of ${stu.pack} and joining is on ${stu.jd}`);
+    </script>
+</body>
+</html>
