@@ -7,39 +7,26 @@
 </head>
 <body>
     <script>
-        let a1=10+"5";
-    alert(`10+"5":${a1}`);
-    let x=10;
-    x+=5;
-    alert(`x=10=>x+=5:${x}`)
-    x1=10-null;
-    alert(`x1=10-Null:${x1}`)
-    x2=10;
-    x*=2;
-    alert(`x=10=>x*=2:${x2}`)
-    a2=10/'2';
-    alert(`10/'2':${a2}`)
-    a3=10%3;
-    alert(`10%3:${a3}`)
-    x3=10;
-    x3=x3**2;
-    alert(`x**2:${x3}`)
-    r1=(10>5&&5<10);
-    alert(`10 > 5 && 5 < 10:${r1}`)
-    r2=(10==='10')
-    alert(`10==='10':${r2}`)
-    r3=(null??'default')
-    alert(`null??'default':${r3}`)
-    r4=(10 || 'default');
-    alert(`10 || 'default':${r4}`)
-    r5=!true;
-    alert(`!true:${r5}`);
-    r6= 10&5;
-    alert(`10&5:${r6}`);
-    r7= 10|5;
-    alert(`10|5:${r7}`);
-    r8=10^5;
-    alert(`10^5:${r8}`);
+    let isHtml = false;
+let isCss = false;
+let isboot = false;
+let isJs = false;
+let isReact = false;
+let isNode = true;
+isHtml &&
+isCss &&
+isboot &&
+isJs == false &&
+isReact == false &&
+isNode == false
+  ? console.log("Then Become UI/UX Developer")
+  : isHtml && isCss && isboot && isJs && isReact && isNode == false
+  ? console.log("Then Become Frontend Developer")
+  : isHtml && isCss && isboot && isJs && isReact == false && isNode
+  ? console.log("Then Become Backend Developer")
+  : isHtml && isCss && isboot && isJs && isReact && isNode
+  ? console.log("Then Become FullStack Developer")
+  : console.log("GO and Join 10000Coders");
     </script>
 </body>
 </html>
