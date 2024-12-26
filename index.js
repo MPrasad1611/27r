@@ -39,8 +39,3 @@
 //         console.log(a[i][1])
 //  }
 
-let a = ["one", "two", "three", "four"];
-let b=[]
-for (i = 0; i < a.length; i++) {
-   
-}
