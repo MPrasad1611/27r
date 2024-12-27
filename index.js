@@ -87,10 +87,25 @@
 //    console.log("Adult");
 // else
 //    console.log("Minor")
-let num=90;
-switch(num){
-    case 90:console.log("94");
-    break;
-    case 34:console.log("34");
-    break;
-};
+// let num=90;
+// switch(num){
+//     case 90:console.log("94");
+//     break;
+//     case 34:console.log("34");
+//     break;
+// };
+// let str="JAVASCRIPT"
+// let a=[];
+// for(i=str.length-1;i>=0;i--){
+//     a[a.length]=`${str[i]} is at index ${i}`;
+    
+// }
+// console.log(a)
+let arr=["Hello","Welcome","to","JavaScript"];
+for(i=0;i<arr.length;i++){
+    let str="";
+    for(j=arr[i].length-1;j>=0;j--){
+       str+=arr[i][j];
+    }
+    console.log(str)
+}
