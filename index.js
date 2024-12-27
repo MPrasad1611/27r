@@ -89,7 +89,7 @@
 //    console.log("Minor")
 let num=90;
 switch(num){
-    case 90:console.log("90");
+    case 90:console.log("94");
     break;
     case 34:console.log("34");
     break;
