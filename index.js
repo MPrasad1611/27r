@@ -80,7 +80,6 @@ else if(m>=70&&m<80)
     console.log("C Grade")
 else
     console.log("F Grade")
-
 console.log("-----------------")
 console.log("Adult or Minor Checking")
 let age = 20;
