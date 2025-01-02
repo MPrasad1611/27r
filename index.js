@@ -101,30 +101,30 @@
 
 // }
 // console.log(a)
-let arr = ["Hello", "Welcome", "to", "JavaScript"];
-let ar = [];
-for (i = 0; i < arr.length; i++) {
-  let str = "";
-  for (j = arr[i].length - 1; j >= 0; j--) {
-    str += arr[i][j];
-  }
-  ar[ar.length] = `${str}`;
-}
-console.log("Task 1 OutPut:-")
-console.log(ar);
-let arr1 = ["Hello", "Welcome", "to", "JavaScript"];
-let ar1 = [];
-for (i = 0; i < arr1.length; i++) {
-  let str = "";
-  if (i % 2 == 0) {
-    for (j = arr1[i].length - 1; j >= 0; j--) {
-      str += arr1[i][j];
-    }
-    ar1[ar1.length] = `${str}`;
-  }
-  else
-     ar1[ar1.length]=arr1[i];
-}
-console.log("Task 2 OutPut:-")
-console.log(ar1);
+// let arr = ["Hello", "Welcome", "to", "JavaScript"];
+// let ar = [];
+// for (i = 0; i < arr.length; i++) {
+//   let str = "";
+//   for (j = arr[i].length - 1; j >= 0; j--) {
+//     str += arr[i][j];
+//   }
+//   ar[ar.length] = `${str}`;
+// }
+// console.log("Task 1 OutPut:-")
+// console.log(ar);
+// let arr1 = ["Hello", "Welcome", "to", "JavaScript"];
+// let ar1 = [];
+// for (i = 0; i < arr1.length; i++) {
+//   let str = "";
+//   if (i % 2 == 0) {
+//     for (j = arr1[i].length - 1; j >= 0; j--) {
+//       str += arr1[i][j];
+//     }
+//     ar1[ar1.length] = `${str}`;
+//   }
+//   else
+//      ar1[ar1.length]=arr1[i];
+// }
+// console.log("Task 2 OutPut:-")
+// console.log(ar1);
 
