@@ -127,9 +127,11 @@
 // }
 // console.log("Task 2 OutPut:-")
 // console.log(ar1);
-function hi(){
-   console.log("Hi Hello")
-   return "Iron";
-}
+// function hi(){
+//    console.log("Hi Hello")
+//    return "Iron";
+// }
 
-console.log(hi());
+// console.log(hi());
+var c=(a,b)=>(a+b);
+console.log(c(4,5))
