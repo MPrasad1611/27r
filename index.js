@@ -133,5 +133,12 @@
 // }
 
 // console.log(hi());
-var c=(a,b)=>(a+b);
-console.log(c(4,5))
+// var c=(a,b)=>(a+b);
+// console.log(c(4,5))
+function demo(x){
+    x()
+    console.log("Hello")
+}
+demo(function (){
+    console.log("hi")
+})
