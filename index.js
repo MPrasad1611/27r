@@ -135,10 +135,16 @@
 // console.log(hi());
 // var c=(a,b)=>(a+b);
 // console.log(c(4,5))
-function demo(x){
-    x()
-    console.log("Hello")
+// function demo(x){
+//     x()
+//     console.log("Hello")
+// }
+// demo(function (){
+//     console.log("hi")
+// })
+function hi(){
+    const i=2;
 }
-demo(function (){
-    console.log("hi")
-})
+if(true){
+    console.log(i)
+}
