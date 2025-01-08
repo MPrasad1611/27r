@@ -7,8 +7,9 @@
 </head>
 <body>
         <button style="width: 90px; background-color:darkgrey;border-radius: 10px;" onclick="cre()">Create Id Card</button>
-        <br><br>
         
+        <button style="width: 90px; background-color:darkgrey;border-radius: 10px;" onclick="del()">Delete Id Card</button>
+        <br><br>
     <script>
         let div1=document.createElement("div")
         let tit=document.createElement("h5")
@@ -57,6 +58,9 @@
             ad.style.borderBottomRightRadius="10px"
             ad.style.backgroundColor="orange"
         }  
+        function del(){
+            div1.remove();
+        }
     </script>
 </body>
 </html>
