@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h4>dhdheuh</h4>
+    <button onclick="h1()">click me</button>
+    <script>
+        let div1 = document.createElement("div");
+        let image = document.createElement("img");
+      function h1() {
+        
+        div1.style.height = "125px";
+        div1.style.width = "150px";
+        div1.style.border = "3px solid red";
+        // document.body.append(div1,"hi","hello")
+        document.body.appendChild(div1, "hi", "hello");
+        
+        image.setAttribute(
+          "src",
+          "https://images.ctfassets.net/vfkpgemp7ek3/1104843306/ef4338ea8a96a113ff97e85f13e2e9c5/pubg-mobile-hits-3-billion-lifetime-revenue.jpg"
+        );
+        image.style.height = "100%";
+        image.style.width = "100%";
+        div1.append(image);
+      }
+    </script>
+  </body>
+</html>
