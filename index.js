@@ -127,6 +127,21 @@
 // }
 // console.log("Task 2 OutPut:-")
 // console.log(ar1);
+let arr=["html","css","JAVASCRIPT","react","ANGULAR"];
+let ar=[];
+for(i=0;i<arr.length;i++){
+    let str="";
+    if(arr[i]==arr[i].toUpperCase())
+    {
+        str+=arr[i].toLowerCase();
+        ar[ar.length]=`${str}`
+    }
+    else{
+        str+=arr[i].toUpperCase();
+        ar[ar.length]=`${str}`
+    }
+}
+console.log(ar)
 // function hi(){
 //    console.log("Hi Hello")
 //    return "Iron";
@@ -142,9 +157,10 @@
 // demo(function (){
 //     console.log("hi")
 // })
-function hi(){
-    const i=2;
-}
-if(true){
-    console.log(i)
-}
+// function hi(){
+//     const i=2;
+// }
+// if(true){
+//     console.log(i)
+// }
+
