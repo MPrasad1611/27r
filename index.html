@@ -7,14 +7,21 @@
 </head>
 <body>
     <script>
-        // let str=new String("hello");
-        // console.log(str)
-        let str="something";
-        // let op=str.charAt(2)
-        // let op=str.at(-2)
-        // let op=str.slice(0,8)
-        // console.log(op)
-        console.log(str.slice(-4,-1))
+        let arr=["html","css","JAVASCRIPT","react","ANGULAR"];
+let ar=[];
+for(i=0;i<arr.length;i++){
+    let str="";
+    if(arr[i]==arr[i].toUpperCase())
+    {
+        str+=arr[i].toLowerCase();
+        ar[ar.length]=`${str}`
+    }
+    else{
+        str+=arr[i].toUpperCase();
+        ar[ar.length]=`${str}`
+    }
+}
+console.log(ar)
     </script>
 </body>
 </html>
