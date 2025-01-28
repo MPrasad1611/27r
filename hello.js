@@ -63,7 +63,7 @@ console.log(r3);
 console.log(`------------------`)
 
 let words = ["bat", "cat", "hat"];
-let reversedWords = words.map(word => word.split('').reverse().join(''));
+let reversedWords = words.map(word =>word.split('').reverse().join(''));
 console.log(`------------------`)
 console.log(reversedWords);
 console.log(`------------------`)
