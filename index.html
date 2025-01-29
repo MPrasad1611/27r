@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ar = ["apple", "banana", "cherry"];
+let op = ar.map((v) => v.charAt(0));
+console.log(`Outputs For Given Questions`)
+console.log(`------------------`)
+console.log(op);
+console.log(`------------------`)
+
+let a1 = ["dog", "cat", "bird"];
+let r = a1.map((a) => a.charCodeAt(a1.length - 1));
+console.log(`------------------`)
+console.log(r);
+console.log(`------------------`)
+
+let s = ["frog", "duck", "goose"];
+let r2 = s.map((word) => {
+  const nextChar = String.fromCharCode(word.charCodeAt(0) + 1);
+  return nextChar + word.slice(1);
+});
+console.log(`------------------`)
+console.log(r2);
+console.log(`------------------`)
+
+let s2 = ["zebra", "lion", "tiger"];
+let r3 = s2.map(function (s) {
+  let transformedWord = s
+    .split("")
+    .map((char) => {
+      return char.charCodeAt(0) % 2 === 0 ? char.toUpperCase() : char;
+    })
+    .join("");
+  return transformedWord;
+});
+console.log(`------------------`)
+console.log(r3);
+console.log(`------------------`)
+
+let words = ["bat", "cat", "hat"];
+let reversedWords = words.map(word =>word.split('').reverse().join(''));
+console.log(`------------------`)
+console.log(reversedWords);
+console.log(`------------------`)
+    </script>
+</body>
+</html>
