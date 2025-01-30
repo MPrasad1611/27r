@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(81, 255, 0);
+      }
+      #hq{
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+      }
+      #hi{
+        border-radius: 8px;
+        background-color: rgb(0, 255, 174);
+      }
+      #i1{
+        border: 2px solid orange;
+        width: 200px;
+        height: 90px;
+        padding: 23px;
+        background-color: rgb(0, 191, 255);
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+        <h1>Even Or Odd Validator</h1>
+      <form id="i1">
+        <label for="hi">Enter Only Number:</label>
+        <input type="text" id="hi" />
+        <br /><br />
+        <input type="submit" id="hq" />
+      </form>
+      <h2 id="dis"></h1>
+    </center>
+    <script>
+      let num = document.getElementById("i1");
+      let h1 = document.getElementById("dis");
+      num.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let value=e.target[0].value;
+        if(isNaN(value) || value.trim()===""){
+            h1.innerHTML="Enter a Valid Number";
+        }
+        else{
+            if (e.target[0].value% 2 == 0){ h1.innerHTML = `${e.target[0].value} is Even`;}
+        else{
+            h1.innerHTML = `${e.target[0].value} is Odd`;
+        }
+        }
+       
+      });
+    </script>
+  </body>
+</html>
