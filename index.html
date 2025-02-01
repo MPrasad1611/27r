@@ -13,6 +13,10 @@
         // localStorage.setItem("person1",JSON.stringify(obj))
         // let st=localStorage.getItem("person1")
         // console.log(JSON.parse(st))
+        let user={"name":"suresh","email":"P@gamil.com"}
+        let info=JSON.parse(localStorage.getItem("data"))||[]
+        info.push(user)
+        localStorage.setItem("data",JSON.stringify(info))
     </script>
 </body>
 </html>
