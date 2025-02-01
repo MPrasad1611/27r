@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="p1"></h1>
+    <video id="i1" autoplay loop controls src=""  height="250px" width="250px"></video>
+    <script>
+        let i=5;
+        let tim=document.getElementById("p1");
+        let vid=document.getElementById("i1");
+        let stop=setInterval(()=>{
+            tim.innerHTML=i--;
+            if(i<0){
+                clearInterval(stop);
+                vid.src="./video/sololeveling1.mp4"
+                vid.attributes="autoplay"
+            }
+        },1000)
+    </script>
 </body>
 </html>
