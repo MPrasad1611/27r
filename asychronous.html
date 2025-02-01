@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function asy1(cbf) {
+        setTimeout(() => {
+          console.log("i am First");
+          cbf();
+        }, 1500);
+      }
+      function asy2(cbf) {
+        setTimeout(() => {
+          console.log("i am Second");
+          cbf();
+        }, 1000);
+      }
+      function asy3() {
+        setTimeout(() => {
+          console.log("i am Third");
+        }, 1250);
+      }
+      asy1(() => asy2(() => asy3()));
+    </script>
+  </body>
+</html>
