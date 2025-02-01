@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // localStorage.setItem("data","item")
-        // sessionStorage.setItem("data","item")
-        // let obj={"name":"prasad"}
-        // localStorage.setItem("person1",JSON.stringify(obj))
-        // let st=localStorage.getItem("person1")
-        // console.log(JSON.parse(st))
-        let user={"name":"suresh","email":"P@gamil.com"}
-        let info=JSON.parse(localStorage.getItem("data"))||[]
-        info.push(user)
-        localStorage.setItem("data",JSON.stringify(info))
+      // localStorage.setItem("data","item")
+      // sessionStorage.setItem("data","item")
+      // let obj={"name":"prasad"}
+      // localStorage.setItem("person1",JSON.stringify(obj))
+      // let st=localStorage.getItem("person1")
+      // console.log(JSON.parse(st))
+      let user = { name: "suresh", email: "P@gamil.com" };
+      let info = JSON.parse(localStorage.getItem("data")) || [];
+      info.push(user);
+      localStorage.setItem("data", JSON.stringify(info));
+      let lo = JSON.parse(localStorage.getItem("data"));
+      console.log(lo);
+      lo.map((x)=>{
+          console.log(x)
+      })
     </script>
-</body>
+  </body>
 </html>
