@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pr=new Promise((res,rej)=>{
+            if(true){
+                res("promise is keeped")
+            }
+            else{
+                rej("promise is not kept")
+            }
+        });
+        //console.log(pr)
+        pr.then((x)=>{console.log(x)}).catch((x)=>{console.log(x)})
+    </script>
+</body>
+</html>
