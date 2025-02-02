@@ -18,7 +18,8 @@
       let req = fetch(url, {
         method: "POST",
         headers: { "Content-type": "application/json" },body:JSON.stringify(data)
-      });})
+      });
+      req.then((x)=>{console.log(x)})})
       
     </script>
   </body>
