@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">clickme</button>
+    <script>
+      let data = {
+        name: "harish",
+        city: "hyd",
+        email: "prasadchowdary1611@gmail.com",
+      };
+      let bt=document.getElementById("btn")
+      bt.addEventListener("click",()=>{let url = "https://679f552e24322f8329c360ab.mockapi.io/data";
+      let req = fetch(url, {
+        method: "POST",
+        headers: { "Content-type": "application/json" },body:JSON.stringify(data)
+      });})
+      
+    </script>
+  </body>
+</html>
