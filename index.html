@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        
+      
+      let data = fetch("https://679f552e24322f8329c360ab.mockapi.io/movies");
+      data
+        .then((x) => x.json())
+        .then((x) => {
+          let r=x;
+          r.map((x)=>{
+            let poster=document.createElement("img")
+            poster.src=x.poster;
+            poster.style.height="250px"
+            poster.style.width="250px"
+            let title=document.createElement("h2")
+            let ti=document.createElement("h3")
+              ti.innerHTML=x.year;
+            title.innerHTML=x.title;
+              let card=document.createElement("div")
+              card.append(poster,title,ti)
+              card.style.border="3px solid blue"
+              card.style.width="250px"
+              card.style.padding="10px"
+              card.style.backgroundColor="aqua";
+              
+
+            document.body.append(card)
+          })
+        })
+        .catch((x) => {
+          console.log(x);
+        });
     </script>
-</body>
+  </body>
 </html>
