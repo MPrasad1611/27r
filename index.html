@@ -6,21 +6,46 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="btn">clickme</button>
+    <button id="btn">clickme for insert</button>
+    <button id="btn1">clickme to get Data</button>
+    <p id="p1"></p>
     <script>
       let data = {
         name: "harish",
         city: "hyd",
         email: "prasadchowdary1611@gmail.com",
       };
-      let bt=document.getElementById("btn")
-      bt.addEventListener("click",()=>{let url = "https://679f552e24322f8329c360ab.mockapi.io/data";
-      let req = fetch(url, {
-        method: "POST",
-        headers: { "Content-type": "application/json" },body:JSON.stringify(data)
+      let bt = document.getElementById("btn");
+      let bt1 = document.getElementById("btn1");
+      let p = document.getElementById("p1");
+      bt.addEventListener("click", () => {
+        let url = "https://679f552e24322f8329c360ab.mockapi.io/data";
+        let req = fetch(url, {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        req.then((x) => {
+          console.log(x.status);
+          if (x.status == 201) p.innerHTML = "Data Is uploaded successfully";
+        });
       });
-      req.then((x)=>{console.log(x)})})
-      
+      btn1.addEventListener("click", () => {
+        let data = fetch("https://679f552e24322f8329c360ab.mockapi.io/data", {
+          method: "get",
+        });
+        data
+          .then((x) => {
+            if(x.status==200){
+                p.innerHTML="Data is succesfully fetched"
+            }
+            return x.json();
+            
+          })
+          .then((x) => {
+            console.log(x);
+          });
+      });
     </script>
   </body>
 </html>
