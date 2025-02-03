@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text"><br> <br>
+        <input type="email"><br> <br>
+        <input type="submit">
+    </form>
+    <script>
+        let form=document.getElementById("form")
+        form.addEventListener("submit",function(e){
+            e.preventDefault()
+            console.log(e.target[0].value)
+            let name=e.target[0].value;
+            let email=e.target[1].value;
+            let data={
+                name:name,
+                email:email
+            };
+            localStorage.setItem("data",JSON.stringify(data));
+            let exdata=JSON.parse(localStorage.getItem("data"));
+            console.log(exdata);
+            let card=document.createElement("div");
+            card.style.backgroundColor="orange";
+            let username=document.createElement("h1");
+            let useremail=document.createElement("p");
+            username.innerHTML=exdata.name;
+            useremail.innerHTML=exdata.email;
+            card.appendChild(username,useremail);
+            document.body.appendChild(card);
+        });
+    </script>
+</body>
+</html>
