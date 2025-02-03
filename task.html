@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form id="i1" method="POST">
-        <input type="text" placeholder="Enter Your Name" name="name" id="d1"><br><br>
-        <input type="text" name="city" placeholder="Enter Your City" id="d2"><br><br>
-        <input type="submit" >
+      <input
+        type="text"
+        placeholder="Enter Your Name"
+        name="name"
+        id="d1"
+      /><br /><br />
+      <input
+        type="text"
+        name="city"
+        placeholder="Enter Your City"
+        id="d2"
+      /><br /><br />
+      <input type="submit" />
+      <p id="p1"></p>
     </form>
     <script>
-        let data=document.getElementById("i1");
-        data.addEventListener("submit",(x)=>{
-            let
-        })
+      let data = document.getElementById("i1");
+      data.addEventListener("submit", (x) => {
+        x.preventDefault();
+        let name = document.getElementById("d1").value;
+        let city = document.getElementById("d2").value;
+        let p = document.getElementById("p1");
+
+        let formdata = { name, city };
+        let url = "https://679f552e24322f8329c360ab.mockapi.io/data";
+        let req = fetch(url, {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(formdata),
+        });
+        req.then((x) => {
+          console.log(x.status);
+          if (x.status == 201) p.innerHTML = "Data Is uploaded successfully";
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

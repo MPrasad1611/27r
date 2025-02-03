@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      form {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background: #ff6b81;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      input[type="submit"]:hover {
+        background: #ff4757;
+      }
+      p {
+        margin-top: 10px;
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="i1" method="POST">
+      <h2>Fill Your Details</h2>
+      <input type="text" placeholder="Enter Your Name" name="name" id="d1" /><br />
+      <input type="text" name="city" placeholder="Enter Your City" id="d2" /><br />
+      <input type="submit" value="Submit" />
+      <p id="p1"></p>
+    </form>
+    <script>
+      let data = document.getElementById("i1");
+      data.addEventListener("submit", (x) => {
+        x.preventDefault();
+        let name = document.getElementById("d1").value;
+        let city = document.getElementById("d2").value;
+        let p = document.getElementById("p1");
+
+        let formdata = { name, city };
+        let url = "https://679f552e24322f8329c360ab.mockapi.io/data";
+        let req = fetch(url, {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(formdata),
+        });
+        req.then((x) => {
+              console.log(x.status)
+          if (x.status == 201) p.innerHTML = "Data uploaded successfully!";
+        });
+      });
+    </script>
+  </body>
+</html>

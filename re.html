@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with LocalStorage</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: rgba(153, 255, 0, 0.775); }
+        form { margin: 20px auto; max-width: 300px; display: flex; flex-direction: column; }
+        input, button { margin: 10px 0; padding: 10px; }
+        #dataDisplay { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; }
+        .card { border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); width: 250px; }
+    </style>
+</head>
+<body>
+    <h2>Enter Your Details</h2>
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h3>Stored Data:</h3>
+    <div id="dataDisplay"></div>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            
+            let userData = { name, email };
+            
+            let storedData = localStorage.getItem("userList");
+            let usersArray = storedData ? JSON.parse(storedData) : [];
+            
+            usersArray.push(userData);
+            localStorage.setItem("userList", JSON.stringify(usersArray));
+            displayData();
+        });
+        
+        function displayData() {
+            let storedData = localStorage.getItem("userList");
+            if (storedData) {
+                let usersArray = JSON.parse(storedData);
+                let displayHTML = usersArray.map(user => `
+                    <div class="card">
+                        <p><strong>Name:</strong> ${user.name}</p>
+                        <p><strong>Email:</strong> ${user.email}</p>
+                    </div>
+                `).join("");
+                document.getElementById("dataDisplay").innerHTML = displayHTML;
+            }
+        }
+        
+       document.addEventListener("DOMContentLoaded", displayData);
+    </script>
+</body>
+</html>
