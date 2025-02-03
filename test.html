@@ -23,6 +23,9 @@
     <div id="dataDisplay"></div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            displayData();
+        });
         document.getElementById("userForm").addEventListener("submit", function(event) {
             event.preventDefault();
             
@@ -33,7 +36,11 @@
             
             let storedData = localStorage.getItem("userList");
             let usersArray = storedData ? JSON.parse(storedData) : [];
-            
+
+            if (usersArray.some(user => user.email === email)) {
+                alert("This email is already registered.");
+                return;
+            }
             usersArray.push(userData);
             localStorage.setItem("userList", JSON.stringify(usersArray));
             displayData();
