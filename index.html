@@ -63,19 +63,32 @@
         // }
         
       }
-      async function Handle() {
-        try {
-          data = await api();
-          let data2 = await data.json();
-          console.log(data2);
-        } catch (err) {
-          console.log(err);
-        }
-        finally{
-            console.log("Finally");
-        }
+      async function Handle(){
+          try{
+              let data=await api();
+              let data2=await data.json();
+              console.log(data2);
+          }catch(err){
+              console.log(err);
+          }
+          finally{
+              console.log("Finally");
+          }
       }
-      Handle();
+        Handle();
+    //   async function Handle() {
+    //     try {
+    //       data = await api();
+    //       let data2 = await data.json();
+    //       console.log(data2);
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //     finally{
+    //         console.log("Finally");
+    //     }
+    //   }
+    //   Handle();
     </script>
   </body>
 </html>
