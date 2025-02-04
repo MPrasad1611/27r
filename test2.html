@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendTrove</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Welcome to TrendTrove</h1>
+        <div id="auth">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </div>
+        <div id="dashboard" style="display:none;">
+            <h2>Dashboard</h2>
+            <button onclick="exploreTrends()">Explore Trends</button>
+            <button onclick="submitTrend()">Submit Trend</button>
+            <button onclick="viewCuratedCollections()">View Curated Collections</button>
+        </div>
+        <div id="trends" style="display:none;">
+            <h2>Trends</h2>
+            <input type="text" id="trendTitle" placeholder="Trend Title">
+            <textarea id="trendDescription" placeholder="Description"></textarea>
+            <button onclick="submitTrend()">Submit Trend</button>
+            <div id="trendList"></div>
+        </div>
+    </div>
+    <script>
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            auth.signInWithEmailAndPassword(email, password)
+                .then(() => {
+                    document.getElementById('auth').style.display = 'none';
+                    document.getElementById('dashboard').style.display = 'block';
+                })
+                .catch(error => alert(error.message));
+        }
+        
+        function register() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(() => alert('User Registered'))
+                .catch(error => alert(error.message));
+        }
+
+        function submitTrend() {
+            const title = document.getElementById('trendTitle').value;
+            const description = document.getElementById('trendDescription').value;
+            db.collection("trends").add({
+                title,
+                description,
+                upvotes: 0
+            }).then(() => alert("Trend Submitted"));
+        }
+        
+        function exploreTrends() {
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('trends').style.display = 'block';
+            db.collection("trends").get().then(snapshot => {
+                const trendList = document.getElementById('trendList');
+                trendList.innerHTML = '';
+                snapshot.forEach(doc => {
+                    const trend = doc.data();
+                    trendList.innerHTML += `<div>
+                        <h3>${trend.title}</h3>
+                        <p>${trend.description}</p>
+                        <button onclick="upvoteTrend('${doc.id}')">Upvote (${trend.upvotes})</button>
+                    </div>`;
+                });
+            });
+        }
+
+        function upvoteTrend(id) {
+            const trendRef = db.collection("trends").doc(id);
+            trendRef.update({
+                upvotes: firebase.firestore.FieldValue.increment(1)
+            }).then(() => alert("Trend Upvoted"));
+        }
+    </script>
+</body>
+</html>
