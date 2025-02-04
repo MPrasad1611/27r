@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function delay() {
+        return new Promise((r, rj) => {
+          setTimeout(() => {
+            if (true) {
+              r("done");
+            } else {
+              rj("error");
+            }
+          }, 2000);
+        });
+      }
+      function delay2() {
+        return new Promise((r, rj) => {
+          setTimeout(() => {
+            if (true) {
+              r("Completed");
+            } else {
+              rj("error");
+            }
+          }, 2000);
+        });
+      }
+      // delay().then((data)=>{
+      //     console.log(data);
+      // }).catch((err)=>{
+      //     console.log(err);
+      // });
+      async function call() {
+        try {
+          let data = await delay();
+          console.log(data);
+          let data2 = await delay2();
+          console.log(data2);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      call();
+    </script>
+  </body>
+</html>
