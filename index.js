@@ -19,7 +19,7 @@
 // // [a,b,c,d,e]=arr;
 // // console.log(a,b,c,d,e);
 // [a,b,...c]=arr;
-// console.log(c);
+// console.l
 let obj={
     name:'sachin',id:101,age:25
 }
